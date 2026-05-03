@@ -237,58 +237,79 @@ GPT-Image2 全量开放后，AI 画图从“能不能出图”变成了“能不
 
 ### 苍何新增实测
 
-- [例 330：月下美女直播画面](docs/gallery-part-2.md#case-330)
-- [例 331：西安手绘水彩城市地图](docs/gallery-part-2.md#case-331)
-- [例 332：茶π产品宣传海报](docs/gallery-part-2.md#case-332)
-- [例 333：AI 眼镜爆炸拆解图](docs/gallery-part-2.md#case-333)
-- [例 334：RAG 技术详解图](docs/gallery-part-2.md#case-334)
-- [例 335：朋友圈截图生成](docs/gallery-part-2.md#case-335)
-- [例 336：个人网页视觉设计](docs/gallery-part-2.md#case-336)
-- [例 337：《短歌行》诗词意境图](docs/gallery-part-2.md#case-337)
-- [例 338：《赤壁怀古》长卷图](docs/gallery-part-2.md#case-338)
-- [例 339：Apple 风格自然科普海报](docs/gallery-part-2.md#case-339)
-- [例 340：彼岸花丛中的红妆女子](docs/gallery-part-2.md#case-340)
+<table>
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <p><strong>例 330：月下美女直播画面</strong></p>
+      <a href="docs/gallery-part-2.md#case-330"><img src="data/images/category-covers/scene.jpg" alt="月下美女直播画面" width="220"></a><br>
+      <sub>高仿直播截图，适合参考界面氛围、弹幕和人物写实结合。</sub><br>
+      <a href="docs/gallery-part-2.md#case-330"><strong>查看案例</strong></a>
+    </td>
+    <td width="33%" valign="top" align="center">
+      <p><strong>例 334：RAG 技术详解图</strong></p>
+      <a href="docs/gallery-part-2.md#case-334"><img src="data/images/category-covers/infographic.jpg" alt="RAG 技术详解图" width="220"></a><br>
+      <sub>技术概念、流程箭头和中文说明模块的结构参考。</sub><br>
+      <a href="docs/gallery-part-2.md#case-334"><strong>查看案例</strong></a>
+    </td>
+    <td width="33%" valign="top" align="center">
+      <p><strong>例 338：《赤壁怀古》长卷图</strong></p>
+      <a href="docs/gallery-part-2.md#case-338"><img src="data/images/category-covers/history.jpg" alt="赤壁怀古长卷图" width="220"></a><br>
+      <sub>长卷尺寸、古风叙事和整篇文字排版结合完整。</sub><br>
+      <a href="docs/gallery-part-2.md#case-338"><strong>查看案例</strong></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <p><strong>例 331：西安手绘水彩城市地图</strong></p>
+      <a href="docs/gallery-part-2.md#case-331"><img src="data/images/case331.png" alt="西安手绘水彩城市地图" width="220"></a><br>
+      <sub>城市地图、手绘路线和地标标注的轻量参考。</sub><br>
+      <a href="docs/gallery-part-2.md#case-331"><strong>查看案例</strong></a>
+    </td>
+    <td width="33%" valign="top" align="center">
+      <p><strong>例 332：茶π产品宣传海报</strong></p>
+      <a href="docs/gallery-part-2.md#case-332"><img src="data/images/case332.png" alt="茶π产品宣传海报" width="220"></a><br>
+      <sub>饮品商品图、中文卖点和清爽商业海报组合。</sub><br>
+      <a href="docs/gallery-part-2.md#case-332"><strong>查看案例</strong></a>
+    </td>
+    <td width="33%" valign="top" align="center">
+      <p><strong>例 339：Apple 风格自然科普海报</strong></p>
+      <a href="docs/gallery-part-2.md#case-339"><img src="data/images/case339.jpg" alt="Apple 风格自然科普海报" width="220"></a><br>
+      <sub>极简棚拍、自然主体和科普信息排版。</sub><br>
+      <a href="docs/gallery-part-2.md#case-339"><strong>查看案例</strong></a>
+    </td>
+  </tr>
+</table>
 
 ### 近 24 小时 X 社区新增
 
-- [例 341：AP Calculus 学习表信息图](docs/gallery-part-2.md#case-341)
-- [例 342：四季包装 Campaign 宫格](docs/gallery-part-2.md#case-342)
-- [例 343：高定时尚杂志封面](docs/gallery-part-2.md#case-343)
-- [例 344：NOIR 街头服饰 Campaign](docs/gallery-part-2.md#case-344)
-- [例 345：法新浪潮撕纸电影海报](docs/gallery-part-2.md#case-345)
-- [例 346：立体刺绣小鸟花枝](docs/gallery-part-2.md#case-346)
-- [例 347：4×4 动作分解参考表](docs/gallery-part-2.md#case-347)
-- [例 348：胡须风格分析海报](docs/gallery-part-2.md#case-348)
-- [例 349：运动时尚三联 Campaign](docs/gallery-part-2.md#case-349)
-- [例 350：足球球员数据涂鸦海报](docs/gallery-part-2.md#case-350)
-- [例 351：健身品牌力量 Campaign](docs/gallery-part-2.md#case-351)
-- [例 352：西楚霸王国风暗黑海报](docs/gallery-part-2.md#case-352)
-- [例 353：品牌口红推荐报告信息图](docs/gallery-part-2.md#case-353)
-- [例 354：Logo 与品牌身份系统提示词合集](docs/gallery-part-2.md#case-354)
-- [例 355：概念字体海报 Prompt](docs/gallery-part-2.md#case-355)
-- [例 356：过度思考超现实街头 Campaign](docs/gallery-part-2.md#case-356)
-- [例 357：鱼眼镜面复古咖啡馆人像](docs/gallery-part-2.md#case-357)
-- [例 358：草莓能量饮料商业广告](docs/gallery-part-2.md#case-358)
-- [例 359：水墨双重曝光人物海报](docs/gallery-part-2.md#case-359)
-- [例 360：长发造型分析信息图](docs/gallery-part-2.md#case-360)
-- [例 361：手机爆炸拆解图](docs/gallery-part-2.md#case-361)
-- [例 362：抹茶品牌触点系统视觉板](docs/gallery-part-2.md#case-362)
-- [例 363：磁场铁粉 Logo 物理成像](docs/gallery-part-2.md#case-363)
-- [例 364：奢华个人色彩档案信息图](docs/gallery-part-2.md#case-364)
-- [例 365：科学家收藏级玩具发布板](docs/gallery-part-2.md#case-365)
-- [例 366：咖啡馆写实照片与 2D 涂鸦叠加](docs/gallery-part-2.md#case-366)
-- [例 367：VELORA 奢华香水广告海报](docs/gallery-part-2.md#case-367)
-- [例 368：印度餐厅菜单改造宣传图](docs/gallery-part-2.md#case-368)
-- [例 369：明洞旅游区域地图](docs/gallery-part-2.md#case-369)
-- [例 370：Crumple Chair 概念沙发研发板](docs/gallery-part-2.md#case-370)
-- [例 371：Scrapbook 真人图与迷你分身](docs/gallery-part-2.md#case-371)
-- [例 372：可爱角色设定表](docs/gallery-part-2.md#case-372)
-- [例 373：高端肉类海鲜品牌英雄图](docs/gallery-part-2.md#case-373)
-- [例 374：彩色潦草小狗线条风格重绘](docs/gallery-part-2.md#case-374)
-- [例 375：古希腊三哲时间轴城市图](docs/gallery-part-2.md#case-375)
-- [例 376：泼洒抹茶街头手机照片](docs/gallery-part-2.md#case-376)
-- [例 377：樱花咖啡户外人像](docs/gallery-part-2.md#case-377)
-- [例 378：高端 3D 收藏玩具头像](docs/gallery-part-2.md#case-378)
+<table>
+  <tr>
+    <td width="25%" valign="top" align="center">
+      <p><strong>例 375：古希腊三哲时间轴城市图</strong></p>
+      <a href="docs/gallery-part-2.md#case-375"><img src="data/images/case375.jpg" alt="古希腊三哲时间轴城市图" width="180"></a><br>
+      <sub>历史人物、城市背景和时间轴叙事。</sub><br>
+      <a href="docs/gallery-part-2.md#case-375"><strong>查看案例</strong></a>
+    </td>
+    <td width="25%" valign="top" align="center">
+      <p><strong>例 376：泼洒抹茶街头手机照片</strong></p>
+      <a href="docs/gallery-part-2.md#case-376"><img src="data/images/category-covers/photo.jpg" alt="泼洒抹茶街头手机照片" width="180"></a><br>
+      <sub>手机纪实、真实光影和负面约束。</sub><br>
+      <a href="docs/gallery-part-2.md#case-376"><strong>查看案例</strong></a>
+    </td>
+    <td width="25%" valign="top" align="center">
+      <p><strong>例 377：樱花咖啡户外人像</strong></p>
+      <a href="docs/gallery-part-2.md#case-377"><img src="data/images/case377.jpg" alt="樱花咖啡户外人像" width="180"></a><br>
+      <sub>参考图编辑、身份保持和户外生活方式写真。</sub><br>
+      <a href="docs/gallery-part-2.md#case-377"><strong>查看案例</strong></a>
+    </td>
+    <td width="25%" valign="top" align="center">
+      <p><strong>例 378：高端 3D 收藏玩具头像</strong></p>
+      <a href="docs/gallery-part-2.md#case-378"><img src="data/images/category-covers/latest.jpg" alt="高端 3D 收藏玩具头像" width="180"></a><br>
+      <sub>参考图转 3D 收藏玩具，保留身份锚点。</sub><br>
+      <a href="docs/gallery-part-2.md#case-378"><strong>查看案例</strong></a>
+    </td>
+  </tr>
+</table>
 
 #### 代表案例 1：月下美女直播画面
 
