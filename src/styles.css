@@ -541,6 +541,28 @@ button {
   font-size: 13px;
 }
 
+.templateCaseGrid {
+  columns: 3 300px;
+}
+
+.templateVisualCard .templateImage img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+}
+
+.templateVisualCard .caseBody p {
+  min-height: 72px;
+}
+
+.singleAction {
+  grid-template-columns: 1fr;
+}
+
+.singleAction a {
+  gap: 8px;
+}
+
 .searchBox {
   display: flex;
   align-items: center;

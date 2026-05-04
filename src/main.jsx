@@ -34,6 +34,7 @@ const copy = {
     templateTitle: 'Start from a proven template, then remix the case library.',
     templateSubtitle:
       'Each template is distilled from real GPT-Image2 examples and includes structure, constraints, and pitfalls for production use.',
+    templateKind: 'Prompt Template',
     openTemplate: 'Open Template',
     search: 'Search cases, sources, prompts...',
     category: 'Category',
@@ -67,6 +68,7 @@ const copy = {
     templateTitle: '先用成熟模板起稿，再从案例库里继续 remix。',
     templateSubtitle:
       '每套模板都从真实 GPT-Image2 案例里提炼，包含结构、约束和防坑经验，适合生产流程直接复用。',
+    templateKind: '提示词模板',
     openTemplate: '打开模板',
     search: '搜索案例、来源、Prompt...',
     category: '分类',
@@ -239,12 +241,111 @@ const labelMap = {
   }
 };
 
+const templateVisuals = {
+  'tpl-ui': {
+    cover: '/images/category-covers/ui.jpg',
+    category: 'UI & Interfaces',
+    tags: ['UI', 'Dashboard', 'Screenshot']
+  },
+  'tpl-infographic': {
+    cover: '/images/category-covers/infographic.jpg',
+    category: 'Charts & Infographics',
+    tags: ['Infographic', 'Chart', 'Education']
+  },
+  'tpl-poster': {
+    cover: '/images/category-covers/poster.jpg',
+    category: 'Posters & Typography',
+    tags: ['Poster', 'Typography', 'Campaign']
+  },
+  'tpl-product': {
+    cover: '/images/category-covers/product.jpg',
+    category: 'Products & E-commerce',
+    tags: ['Product', 'Commerce', 'Packaging']
+  },
+  'tpl-brand': {
+    cover: '/images/category-covers/brand.jpg',
+    category: 'Brand & Logos',
+    tags: ['Brand', 'Logo', 'Identity']
+  },
+  'tpl-architecture': {
+    cover: '/images/category-covers/architecture.jpg',
+    category: 'Architecture & Spaces',
+    tags: ['Architecture', 'Interior', 'Map']
+  },
+  'tpl-photo': {
+    cover: '/images/category-covers/photo.jpg',
+    category: 'Photography & Realism',
+    tags: ['Photography', 'Realistic', 'Lens']
+  },
+  'tpl-illustration': {
+    cover: '/images/category-covers/illustration.jpg',
+    category: 'Illustration & Art',
+    tags: ['Illustration', 'Art', 'Style']
+  },
+  'tpl-character': {
+    cover: '/images/category-covers/character.jpg',
+    category: 'Characters & People',
+    tags: ['Character', 'Pose', '3D']
+  },
+  'tpl-scene': {
+    cover: '/images/category-covers/scene.jpg',
+    category: 'Scenes & Storytelling',
+    tags: ['Scene', 'Story', 'Storyboard']
+  },
+  'tpl-history': {
+    cover: '/images/category-covers/history.jpg',
+    category: 'History & Classical Themes',
+    tags: ['History', 'Classical', 'Scroll']
+  },
+  'tpl-document': {
+    cover: '/images/category-covers/document.jpg',
+    category: 'Documents & Publishing',
+    tags: ['Document', 'Publishing', 'Layout']
+  },
+  'tpl-other': {
+    cover: '/images/category-covers/other.jpg',
+    category: 'Other Use Cases',
+    tags: ['Creative', 'R&D', 'Special']
+  }
+};
+
 function cx(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 function localizeLabel(value, language) {
   return labelMap[language]?.[value] || value;
+}
+
+function localizeTemplateTag(value, language) {
+  const zhTags = {
+    Art: '艺术',
+    Campaign: '商业 Campaign',
+    Chart: '图表',
+    Classical: '古典',
+    Creative: '创意',
+    Dashboard: '仪表盘',
+    Document: '文档',
+    Education: '教育',
+    Identity: '身份系统',
+    Interior: '室内',
+    Layout: '版式',
+    Lens: '镜头',
+    Logo: 'Logo',
+    Map: '地图',
+    Packaging: '包装',
+    Pose: '动作',
+    Publishing: '出版',
+    'R&D': '研发',
+    Scene: '场景',
+    Screenshot: '截图',
+    Scroll: '长卷',
+    Special: '特殊输出',
+    Storyboard: '分镜',
+    Style: '风格',
+    Typography: '字体'
+  };
+  return language === 'zh' ? zhTags[value] || localizeLabel(value, language) : value;
 }
 
 function useCopy() {
@@ -366,25 +467,43 @@ function TemplateSection({ language }) {
           <ArrowUpRight size={16} />
         </a>
       </div>
-      <div className="templateGrid">
+      <div className="caseGrid templateCaseGrid">
         {templateCards.map((item, index) => {
           const [title, description] = item[language];
+          const visual = templateVisuals[item.anchor] || templateVisuals['tpl-other'];
           return (
-            <a
-              className="templateCard"
-              href={`${repoDocsUrl}#${item.anchor}`}
-              target="_blank"
-              rel="noreferrer"
-              key={`${item.anchor}-${title}`}
-            >
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <strong>
-                {t.openTemplate}
-                <ArrowUpRight size={15} />
-              </strong>
-            </a>
+            <article className="caseCard templateVisualCard" key={`${item.anchor}-${title}`}>
+              <a
+                className="caseImage templateImage"
+                href={`${repoDocsUrl}#${item.anchor}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={visual.cover} alt={title} loading="lazy" />
+                <span className="caseBadge">
+                  {language === 'zh' ? '模板' : 'Template'} {String(index + 1).padStart(2, '0')}
+                </span>
+              </a>
+              <div className="caseBody">
+                <div className="caseMeta">
+                  <span>{t.templateKind}</span>
+                  <span>{localizeLabel(visual.category, language)}</span>
+                </div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <div className="tagRow">
+                  {visual.tags.map((tag) => (
+                    <span key={`${item.anchor}-${tag}`}>{localizeTemplateTag(tag, language)}</span>
+                  ))}
+                </div>
+                <div className="cardActions singleAction">
+                  <a href={`${repoDocsUrl}#${item.anchor}`} target="_blank" rel="noreferrer">
+                    {t.openTemplate}
+                    <ArrowUpRight size={17} />
+                  </a>
+                </div>
+              </div>
+            </article>
           );
         })}
       </div>
