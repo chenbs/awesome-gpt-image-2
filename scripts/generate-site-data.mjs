@@ -197,7 +197,6 @@ const styles = [...new Set(cases.flatMap((item) => item.styles))].sort();
 const scenes = [...new Set(cases.flatMap((item) => item.scenes))].sort();
 
 const payload = {
-  generatedAt: new Date().toISOString(),
   repository: 'https://github.com/freestylefly/awesome-gpt-image-2',
   totalCases: cases.length,
   categories,

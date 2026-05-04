@@ -13,8 +13,113 @@ import './styles.css';
 
 const fallbackRepoUrl = 'https://github.com/freestylefly/awesome-gpt-image-2';
 
+const copy = {
+  en: {
+    loading: 'Loading GPT-Image2 cases...',
+    brand: 'GPT-Image2 Gallery',
+    navCases: 'Cases',
+    eyebrow: 'Live GPT-Image2 prompt gallery',
+    title: 'Browse viral GPT-Image2 cases like a product catalog.',
+    subtitle:
+      'A visual front door for the awesome-gpt-image-2 repository: copy production-ready prompts, filter by style or scene, and jump straight into the GitHub source.',
+    explore: 'Explore cases',
+    githubProject: 'GitHub project',
+    cases: 'cases',
+    categories: 'categories',
+    templates: 'templates',
+    sectionEyebrow: 'Copy, filter, remix',
+    sectionTitle: 'Viral cases with prompts one click away.',
+    search: 'Search cases, sources, prompts...',
+    category: 'Category',
+    style: 'Style',
+    scene: 'Scene',
+    all: 'All',
+    matching: 'matching cases',
+    openGithub: 'Open GitHub project',
+    copied: 'Copied',
+    copyPrompt: 'Copy Prompt',
+    openOnGithub: 'Open on GitHub',
+    limit: (count) => `Showing the first ${count} results for speed. Use search or filters to narrow the gallery.`
+  },
+  zh: {
+    loading: '正在加载 GPT-Image2 案例...',
+    brand: 'GPT-Image2 画廊',
+    navCases: '案例',
+    eyebrow: '实时更新的 GPT-Image2 提示词画廊',
+    title: '像逛产品目录一样浏览 GPT-Image2 爆款案例。',
+    subtitle:
+      '这是 awesome-gpt-image-2 的可视化入口：复制可直接复用的 Prompt，按风格或场景筛选，并一键跳转到 GitHub 源项目。',
+    explore: '浏览案例',
+    githubProject: 'GitHub 项目',
+    cases: '个案例',
+    categories: '个分类',
+    templates: '套模板',
+    sectionEyebrow: '复制、筛选、复用',
+    sectionTitle: '爆款案例和 Prompt，一键可取。',
+    search: '搜索案例、来源、Prompt...',
+    category: '分类',
+    style: '风格',
+    scene: '场景',
+    all: '全部',
+    matching: '个匹配案例',
+    openGithub: '打开 GitHub 项目',
+    copied: '已复制',
+    copyPrompt: '复制 Prompt',
+    openOnGithub: '在 GitHub 打开',
+    limit: (count) => `为了保证浏览速度，当前展示前 ${count} 条结果。可以用搜索或筛选缩小范围。`
+  }
+};
+
+const labelMap = {
+  zh: {
+    'Architecture & Spaces': '建筑与空间',
+    Architecture: '建筑',
+    Brand: '品牌',
+    'Brand & Logos': '品牌与标志',
+    Character: '角色',
+    Characters: '人物',
+    'Characters & People': '人物与角色',
+    Charts: '图表',
+    'Charts & Infographics': '图表与信息可视化',
+    Classical: '古典',
+    Commerce: '商业',
+    Creative: '创意',
+    Documents: '文档',
+    'Documents & Publishing': '文档与出版物',
+    Education: '教育',
+    Fashion: '时尚',
+    Food: '食品饮品',
+    History: '历史',
+    'History & Classical Themes': '历史与古风题材',
+    Illustration: '插画',
+    'Illustration & Art': '插画与艺术',
+    Infographic: '信息图',
+    'Other Use Cases': '其他应用场景',
+    Photography: '摄影',
+    'Photography & Realism': '摄影与写实',
+    Poster: '海报',
+    'Posters & Typography': '海报与排版',
+    Product: '商品',
+    Products: '商品',
+    'Products & E-commerce': '商品与电商',
+    Realistic: '写实',
+    Scenes: '场景',
+    'Scenes & Storytelling': '场景与叙事',
+    Social: '社媒',
+    Story: '叙事',
+    Tech: '科技',
+    Travel: '旅行',
+    UI: '界面',
+    'UI & Interfaces': 'UI 与界面'
+  }
+};
+
 function cx(...classes) {
   return classes.filter(Boolean).join(' ');
+}
+
+function localizeLabel(value, language) {
+  return labelMap[language]?.[value] || value;
 }
 
 function useCopy() {
@@ -41,7 +146,9 @@ function useCopy() {
   return { copiedId, copyPrompt };
 }
 
-function Hero({ hotCases, repoUrl, totalCases, categoryCount }) {
+function Hero({ hotCases, language, repoUrl, totalCases, categoryCount }) {
+  const t = copy[language];
+
   return (
     <section className="hero">
       <div className="heroGlow heroGlowA" />
@@ -50,27 +157,24 @@ function Hero({ hotCases, repoUrl, totalCases, categoryCount }) {
       <div className="heroCopy">
         <div className="eyebrow">
           <Sparkles size={16} />
-          Live GPT-Image2 prompt gallery
+          {t.eyebrow}
         </div>
-        <h1>Browse viral GPT-Image2 cases like a product catalog.</h1>
-        <p>
-          A visual front door for the awesome-gpt-image-2 repository: copy production-ready prompts,
-          filter by style or scene, and jump straight into the GitHub source.
-        </p>
+        <h1>{t.title}</h1>
+        <p>{t.subtitle}</p>
         <div className="heroActions">
           <a className="primaryAction" href="#gallery">
-            Explore cases
+            {t.explore}
             <ArrowUpRight size={18} />
           </a>
           <a className="secondaryAction" href={repoUrl} target="_blank" rel="noreferrer">
             <Github size={18} />
-            GitHub project
+            {t.githubProject}
           </a>
         </div>
         <div className="metrics">
-          <span><strong>{totalCases}</strong> cases</span>
-          <span><strong>{categoryCount}</strong> categories</span>
-          <span><strong>20+</strong> templates</span>
+          <span><strong>{totalCases}</strong> {t.cases}</span>
+          <span><strong>{categoryCount}</strong> {t.categories}</span>
+          <span><strong>20+</strong> {t.templates}</span>
         </div>
       </div>
       <div className="heroDeck" aria-label="Featured GPT-Image2 cases">
@@ -83,7 +187,7 @@ function Hero({ hotCases, repoUrl, totalCases, categoryCount }) {
             key={caseItem.id}
           >
             <img src={caseItem.image} alt={caseItem.imageAlt} />
-            <span>Case {caseItem.id}</span>
+            <span>{language === 'zh' ? '案例' : 'Case'} {caseItem.id}</span>
           </a>
         ))}
       </div>
@@ -99,16 +203,40 @@ function FilterPill({ active, children, onClick }) {
   );
 }
 
-function PromptCard({ caseItem, copied, onCopy }) {
+function LanguageSwitch({ language, setLanguage }) {
+  return (
+    <div className="languageSwitch" aria-label="Language switcher">
+      <button
+        className={cx(language === 'en' && 'active')}
+        type="button"
+        onClick={() => setLanguage('en')}
+      >
+        EN
+      </button>
+      <button
+        className={cx(language === 'zh' && 'active')}
+        type="button"
+        onClick={() => setLanguage('zh')}
+      >
+        中文
+      </button>
+    </div>
+  );
+}
+
+function PromptCard({ caseItem, copied, language, onCopy }) {
+  const t = copy[language];
+  const tags = [...new Set([...caseItem.styles, ...caseItem.scenes])].slice(0, 4);
+
   return (
     <article className="caseCard">
       <a className="caseImage" href={caseItem.githubUrl} target="_blank" rel="noreferrer">
         <img src={caseItem.image} alt={caseItem.imageAlt} loading="lazy" />
-        <span className="caseBadge">Case {caseItem.id}</span>
+        <span className="caseBadge">{language === 'zh' ? '案例' : 'Case'} {caseItem.id}</span>
       </a>
       <div className="caseBody">
         <div className="caseMeta">
-          <span>{caseItem.category}</span>
+          <span>{localizeLabel(caseItem.category, language)}</span>
           {caseItem.sourceUrl ? (
             <a href={caseItem.sourceUrl} target="_blank" rel="noreferrer">
               {caseItem.sourceLabel}
@@ -120,16 +248,16 @@ function PromptCard({ caseItem, copied, onCopy }) {
         <h3>{caseItem.title}</h3>
         <p>{caseItem.promptPreview}</p>
         <div className="tagRow">
-          {[...new Set([...caseItem.styles, ...caseItem.scenes])].slice(0, 4).map((tag) => (
-            <span key={`${caseItem.id}-${tag}`}>{tag}</span>
+          {tags.map((tag) => (
+            <span key={`${caseItem.id}-${tag}`}>{localizeLabel(tag, language)}</span>
           ))}
         </div>
         <div className="cardActions">
           <button type="button" onClick={() => onCopy(caseItem)}>
             {copied ? <Check size={17} /> : <Copy size={17} />}
-            {copied ? 'Copied' : 'Copy Prompt'}
+            {copied ? t.copied : t.copyPrompt}
           </button>
-          <a href={caseItem.githubUrl} target="_blank" rel="noreferrer" aria-label="Open on GitHub">
+          <a href={caseItem.githubUrl} target="_blank" rel="noreferrer" aria-label={t.openOnGithub}>
             <Github size={18} />
           </a>
         </div>
@@ -140,12 +268,14 @@ function PromptCard({ caseItem, copied, onCopy }) {
 
 function App() {
   const [siteData, setSiteData] = useState(null);
+  const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'en');
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('All');
   const [style, setStyle] = useState('All');
   const [scene, setScene] = useState('All');
   const { copiedId, copyPrompt } = useCopy();
   const repoUrl = siteData?.repository || fallbackRepoUrl;
+  const t = copy[language];
 
   useEffect(() => {
     let cancelled = false;
@@ -158,6 +288,11 @@ function App() {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('language', language);
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+  }, [language]);
 
   const hotCases = useMemo(() => {
     if (!siteData) return [];
@@ -189,7 +324,7 @@ function App() {
       <main>
         <div className="loadingScreen">
           <WandSparkles size={28} />
-          <span>Loading GPT-Image2 cases...</span>
+          <span>{t.loading}</span>
         </div>
       </main>
     );
@@ -200,18 +335,22 @@ function App() {
       <header className="topbar">
         <a className="brand" href="#">
           <WandSparkles size={21} />
-          GPT-Image2 Gallery
+          {t.brand}
         </a>
-        <nav>
-          <a href="#gallery">Cases</a>
-          <a href={repoUrl} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        </nav>
+        <div className="topbarControls">
+          <nav>
+            <a href="#gallery">{t.navCases}</a>
+            <a href={repoUrl} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </nav>
+          <LanguageSwitch language={language} setLanguage={setLanguage} />
+        </div>
       </header>
 
       <Hero
         hotCases={hotCases}
+        language={language}
         repoUrl={repoUrl}
         totalCases={siteData.totalCases}
         categoryCount={siteData.categories.length}
@@ -229,49 +368,49 @@ function App() {
       <section className="gallerySection" id="gallery">
         <div className="sectionHead">
           <div>
-            <span className="eyebrow">Copy, filter, remix</span>
-            <h2>Viral cases with prompts one click away.</h2>
+            <span className="eyebrow">{t.sectionEyebrow}</span>
+            <h2>{t.sectionTitle}</h2>
           </div>
           <div className="searchBox">
             <Search size={18} />
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Search cases, sources, prompts..."
+              placeholder={t.search}
             />
           </div>
         </div>
 
         <div className="filterPanel">
           <div>
-            <strong>Category</strong>
+            <strong>{t.category}</strong>
             <div className="filterRow">
-              <FilterPill active={category === 'All'} onClick={() => setCategory('All')}>All</FilterPill>
+              <FilterPill active={category === 'All'} onClick={() => setCategory('All')}>{t.all}</FilterPill>
               {siteData.categories.map((item) => (
                 <FilterPill key={item} active={category === item} onClick={() => setCategory(item)}>
-                  {item}
+                  {localizeLabel(item, language)}
                 </FilterPill>
               ))}
             </div>
           </div>
           <div>
-            <strong>Style</strong>
+            <strong>{t.style}</strong>
             <div className="filterRow">
-              <FilterPill active={style === 'All'} onClick={() => setStyle('All')}>All</FilterPill>
+              <FilterPill active={style === 'All'} onClick={() => setStyle('All')}>{t.all}</FilterPill>
               {siteData.styles.map((item) => (
                 <FilterPill key={item} active={style === item} onClick={() => setStyle(item)}>
-                  {item}
+                  {localizeLabel(item, language)}
                 </FilterPill>
               ))}
             </div>
           </div>
           <div>
-            <strong>Scene</strong>
+            <strong>{t.scene}</strong>
             <div className="filterRow">
-              <FilterPill active={scene === 'All'} onClick={() => setScene('All')}>All</FilterPill>
+              <FilterPill active={scene === 'All'} onClick={() => setScene('All')}>{t.all}</FilterPill>
               {siteData.scenes.map((item) => (
                 <FilterPill key={item} active={scene === item} onClick={() => setScene(item)}>
-                  {item}
+                  {localizeLabel(item, language)}
                 </FilterPill>
               ))}
             </div>
@@ -279,9 +418,9 @@ function App() {
         </div>
 
         <div className="resultBar">
-          <span>{filteredCases.length} matching cases</span>
+          <span>{language === 'zh' ? `${filteredCases.length} ${t.matching}` : `${filteredCases.length} ${t.matching}`}</span>
           <a href={repoUrl} target="_blank" rel="noreferrer">
-            Open GitHub project
+            {t.openGithub}
             <ArrowUpRight size={16} />
           </a>
         </div>
@@ -291,6 +430,7 @@ function App() {
             <PromptCard
               caseItem={caseItem}
               copied={copiedId === caseItem.id}
+              language={language}
               onCopy={copyPrompt}
               key={caseItem.id}
             />
@@ -299,7 +439,7 @@ function App() {
 
         {filteredCases.length > visibleCases.length && (
           <p className="limitNote">
-            Showing the first {visibleCases.length} results for speed. Use search or filters to narrow the gallery.
+            {t.limit(visibleCases.length)}
           </p>
         )}
       </section>
