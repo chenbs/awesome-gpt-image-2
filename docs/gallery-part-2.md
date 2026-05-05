@@ -7247,3 +7247,239 @@ Inspired by Tsingtao (China beer)🍺
 ```
 
 ***
+
+<a name="case-386"></a>
+
+### 例 386：品牌包络产品广告
+
+![品牌包络产品广告](../data/images/case386.jpg)
+
+**来源：** [@SRKDAN](https://x.com/SRKDAN/status/2051482047248560393) / [提示词回复](https://x.com/SRKDAN/status/2051482048729166109)
+
+**提示词：**
+
+```text
+The Brand Envelope | GPT Image-2 Prompt #89
+
+This takes any product photo and wraps it in your specific brand world. Different product each time. Same brand, every time.
+
+PHASE 1 / ANCHOR: Describe [BRAND IDENTITY] in 2 lines. Palette, texture, mood.
+PHASE 2 / INJECT: Place [PRODUCT] inside that brand world, not the reverse.
+PHASE 3 / FORMAT: Set [OUTPUT FORMAT]. Hero, square ad, or story.
+PHASE 4 / SIGNATURE: Apply [BRAND ELEMENT]. Grain, shadow, or overlay.
+
+Swap: [BRAND IDENTITY] / [PRODUCT] / [FORMAT]
+```
+
+***
+
+<a name="case-387"></a>
+
+### 例 387：Netflix 首页主视觉 UI
+
+![Netflix 首页主视觉 UI](../data/images/case387.jpg)
+
+**来源：** [@aimikoda](https://x.com/aimikoda/status/2051420440451801240)
+
+**提示词：**
+
+```text
+Create a Netflix homepage UI featuring a main hero film with its title and still generated from the uploaded reference.
+```
+
+***
+
+<a name="case-388"></a>
+
+### 例 388：1980s Claude 复古杂志广告
+
+![1980s Claude 复古杂志广告](../data/images/case388.jpg)
+
+**来源：** [@Shinning1010](https://x.com/Shinning1010/status/2051410804805599436) / [提示词回复](https://x.com/Shinning1010/status/2051410812829335959)
+
+**提示词：**
+
+```text
+A fictional 1980s magazine advertisement poster introducing “Claude” as a revolutionary home AI assistant, retro commercial print ad style, bold headline at the top reading “Introducing Claude!”, large chrome metallic 3D typography with pink and blue reflections, yellow italic tagline underneath: “The AI assistant that talks back.”
+
+Center composition: a beige 1980s CRT home computer with chunky keyboard on a wooden desk, green monochrome terminal screen glowing, readable text on screen: “Claude”, subtitle: “The helpful AI assistant.” On the screen, a retro terminal-style conversation reads:
+“YOU: How can you help me today?”
+“CLAUDE: I can answer questions, help you write, summarize information, brainstorm ideas, and explain topics clearly.”
+“YOU:”
+
+A cheerful 1980s family of three gathers around the computer: father in a blue sweater, mother with curly hair in a pink sweater, young boy in a striped sweater, all looking amazed, delighted, and fascinated, warm nostalgic expressions, classic family technology advertising mood.
+
+Background: dark starry night sky, purple and blue neon perspective grid, retro sci-fi glow, subtle palm silhouettes, sparkling highlights, lens flares, dramatic yet friendly atmosphere.
+
+Poster layout: left side contains stacked retro feature boxes with glowing neon icons, including a question mark, pencil, light bulb, and clock. Each feature box includes short retro advertising copy:
+“ANSWERS QUESTIONS” — Get helpful, clear answers in everyday language.
+“HELPS YOU WRITE” — Draft ideas, notes, letters, and more with ease.
+“GENERATES IDEAS” — Brainstorm, create, and think bigger.
+“AVAILABLE WHENEVER YOU NEED IT” — Day or night, Claude is ready to help.
+
+Add a small retro text block describing Claude:
+“For the first time, an AI assistant you can have a conversation with. Ask questions. Get answers. Share ideas. Write drafts, notes, and reports. Explore topics, organize thoughts, and solve problems. Claude understands natural language and responds in a clear, helpful way.”
+
+Add a short highlighted copy block:
+“It’s helpful. It’s thoughtful.
+It’s always by your side.”
+
+Bottom area includes a large “Claude” brand wordmark with colorful diagonal retro stripes, and the slogan:
+“A smarter way to think, write, and explore.”
+
+Bottom right has a white promotional price sticker area with bold pink text:
+“Free!!”
+Smaller text underneath:
+“Available now for curious minds everywhere.”
+
+Top right has a bright yellow starburst badge saying:
+“A REVOLUTION IN AI ASSISTANCE!”
+
+Include a retro product box on the desk labeled “Claude” with small text:
+“SMARTER SOFTWARE FOR MODERN THINKERS.”
+
+Include a mug or accessory on the desk branded “Claude”.
+
+Visual style: 1985 consumer computer advertisement, airbrushed illustration, glossy print texture, halftone details, nostalgic retro futurism, high saturation, cinematic product lighting, authentic 1980s typography and layout, readable ad composition, detailed vintage commercial poster, highly polished, warm family-friendly mood, retro tech fantasy, vertical poster.
+
+Negative prompts:
+modern laptop, smartphone, flat design, minimalism, futuristic 2020s interface, cyberpunk overload, messy layout, unreadable typography, distorted text, misspelled words, deformed hands, extra fingers, bad anatomy, duplicate people, plastic skin, overexposed lighting, low resolution, blurry image, warped computer, broken keyboard, cluttered composition, inconsistent vintage style, random symbols, ugly poster design, poor hierarchy, incorrect perspective
+```
+
+***
+
+<a name="case-389"></a>
+
+### 例 389：Transparent Labs Hydrate 健身补剂 Campaign
+
+![Transparent Labs Hydrate 健身补剂 Campaign](../data/images/case389.jpg)
+
+**来源：** [@amynys](https://x.com/amynys/status/2051409591137972606)
+
+**提示词：**
+
+```text
+Create a striking campaign poster that stops people mid-scroll for Transparent Labs Hydrate.
+
+Bold high-impact supplement advertisement with dramatic black and deep electric blue color palette, gritty premium fitness aesthetic, sharp cinematic lighting, glossy reflections, light smoke atmosphere, intense contrast.
+
+Giant headline typography at top reading “TRANSPARENT LABS HYDRATE” in oversized distressed white and electric blue text.
+
+Center composition features the exact woman from the attached reference image as a fit athletic female model seated confidently on a studio floor, holding a shaker bottle, with a focused and powerful expression.
+
+Change her clothes into sleek black fitness gym outfit: a black sports bra / tank top and high-waisted black leggings with chunky white sneakers. Large glowing “1%” graphic behind the subject symbolizing daily progress.
+
+Front left foreground shows a matte black Transparent Labs Hydrate tub with modern luxury label reading “HYDRATE”, scoop of electrolyte powder spilled beside the container.
+
+Surround the poster with clean icon-based benefit callouts: replenishes electrolytes, supports hydration, boosts recovery, improves endurance, enhances performance, zero sugar, lab tested, premium quality, no fillers. Strong motivational copy such as “Daily Hydration. Peak Performance.”
+
+Hyper realistic textures, polished commercial retouching, premium sports nutrition branding, modern typography layout, social media ad format, ultra detailed, high resolution.
+```
+
+***
+
+<a name="case-390"></a>
+
+### 例 390：羊毛毡国家微缩世界
+
+![羊毛毡国家微缩世界](../data/images/case390.jpg)
+
+**来源：** [@volkan_iras](https://x.com/volkan_iras/status/2051403524966141980) / [提示词回复](https://x.com/volkan_iras/status/2051403530590638325)
+
+**提示词：**
+
+```text
+Country: [INSERT COUNTRY NAME]
+
+A miniature felt diorama made of fluffy yarn, wool, and needlework, designed as a single cohesive small world (not a collage), reflecting the real landscape, culture, and daily life of the country.
+
+Structure:
+- Select 4–7 naturally integrated elements (landscape, architecture, transport, street life, culture)
+- Everything must flow together as one environment
+
+Foreground:
+Everyday life — small shops, cafes, markets, people interacting, local clothing, street details, subtle movement, warm human presence
+
+Midground:
+Connecting flow — streets, bridges, rivers, paths, transport, cultural spaces that guide the eye naturally from front to back
+
+Background:
+One strong identity anchor — landmark, skyline, mountain, or symbolic landscape clearly representing the country (keep it clean, not overcrowded)
+
+Style:
+Handmade wool felt, yarn, needle-felt textures, visible fibers, soft edges, miniature craftsmanship, premium diorama realism
+
+Lighting:
+Warm golden hour or bright noon, soft shadows, clear visibility, gentle glow enhancing depth
+
+Color:
+Soft but saturated palette reflecting the country’s natural tones (greens, sky blues, architectural hues, cultural accents), warm and balanced
+
+Composition:
+Vertical frame, balanced or centered perspective, slight top-down or immersive angle, clear foreground–midground–background depth
+
+Mood:
+Warm, emotional, calm, refined — like a handcrafted fairy-tale version of real life (not childish)
+
+Rules:
+- No logos or text overlays
+- No collage-style composition
+- No random symbolic clutter
+- Keep it realistic but stylized as a handmade miniature world
+
+Quality:
+16K, ultra-detailed, hyper-realistic miniature textures, cinematic depth, sharp focus
+
+output_goal:
+A single, cohesive felt diorama world that instantly conveys the identity and atmosphere of the chosen country through integrated landscape, culture, and daily life
+```
+
+***
+
+<a name="case-391"></a>
+
+### 例 391：四国文化锚点服装设计宫格
+
+![四国文化锚点服装设计宫格](../data/images/case391.jpg)
+
+**来源：** [@Gdgtify](https://x.com/Gdgtify/status/2051428657571279137)
+
+**提示词：**
+
+```text
+<instructions> input: continent pick 4 lesser known countries in that continent function drawx($lesser known country){ > Anchor 1: "$lesser known's famous architecture" (it's texture, material and color) > Anchor 2: "$lesser known's famous fashion " (it's texture, material and color) > Anchor 3: "$lesser known's famous food " (it's texture, material and color) > > **Instruction:** Render a dress design that exists at the exact center of this triangle. } output: 2x2 grid, drawx( for each lesser known country)
+```
+
+***
+
+<a name="case-392"></a>
+
+### 例 392：头发里的微型城市
+
+![头发里的微型城市](../data/images/case392.jpg)
+
+**来源：** [@krafterlab](https://x.com/krafterlab/status/2051399740986740986)
+
+**提示词：**
+
+```text
+Macro photograph of a miniature city hidden in human hair, clearly on a real human head, with part of the forehead and hairline visible, realistic skin texture with pores, tiny people walking through the streets between the hair strands, extremely small but realistic proportions, macro photography, 85mm lens, shallow depth of field, natural lighting, neutral colors, no warm tones, ultra realistic hair with visible roots, natural imperfections, slightly messy strands, realistic materials, slightly dirty buildings, no perfect surfaces, photorealistic, looks like a real photo, no illustration, no CGI, no glow
+```
+
+***
+
+<a name="case-393"></a>
+
+### 例 393：Y2K 金色时刻人像
+
+![Y2K 金色时刻人像](../data/images/case393.jpg)
+
+**来源：** [@SiliconBarbie_](https://x.com/SiliconBarbie_/status/2051475105403040014)
+
+**提示词：**
+
+```text
+candid portrait of a beautiful young blonde woman, 21 years old, glowing sun-kissed skin, wearing a baby pink velour tracksuit and butterfly clips in her hair, smiling brightly at the camera, golden hour warm light, palm trees, y2k aesthetic, glossy lips
+```
+
+***
