@@ -1,10 +1,10 @@
 ## 🖼️ 魔法画廊总览
 
-完整画廊已按 GitHub 渲染体积拆成两册，避免页面被截断；当前总案例数为 401。
+完整画廊已按 GitHub 渲染体积拆成两册，避免页面被截断；当前总案例数为 402。
 
 - [返回 README 首页](../README.md)
 - [Part 1：例 1-165](./gallery-part-1.md)
-- [Part 2：例 166-401](./gallery-part-2.md)
+- [Part 2：例 166-402](./gallery-part-2.md)
 - [工业级提示词模板与防坑指南](./templates.md)
 - [声明、Star 趋势图与公众号](./disclaimer.md)
 
@@ -69,15 +69,16 @@
 - [例 399：唱片公司楼梯间写真人像](./gallery-part-2.md#case-399)
 - [例 400：多风格签名选择海报](./gallery-part-2.md#case-400)
 - [例 401：Lost in 国家旅行海报拼贴](./gallery-part-2.md#case-401)
+- [例 402：3D 小红书个人资料卡](./gallery-part-2.md#case-402)
 
 ## 分册说明
 
 - `gallery-part-1.md`：例 1-165，覆盖信息图、界面、海报、摄影、插画等基础主流类型。
-- `gallery-part-2.md`：例 166-401，包含更多品牌、卡牌、直播截图、国风、商业视觉、作者新增实测与社区案例。
+- `gallery-part-2.md`：例 166-402，包含更多品牌、卡牌、直播截图、国风、商业视觉、作者新增实测与社区案例。
 
 ## 分类概览
 
-- UI与界面：60
+- UI与界面：61
 - 图表与信息可视化：44
 - 海报与排版：65
 - 商品与电商：27
@@ -95,7 +96,7 @@
 
 <a name="cat-ui"></a>
 
-### 🧩 UI与界面 · 60 cases
+### 🧩 UI与界面 · 61 cases
 
 - [例 2：社媒界面截图](./gallery-part-1.md#case-2)
 - [例 4：老干妈风味](./gallery-part-1.md#case-4)
@@ -157,6 +158,7 @@
 - [例 335：朋友圈截图生成](./gallery-part-2.md#case-335)
 - [例 336：个人网页视觉设计](./gallery-part-2.md#case-336)
 - [例 387：Netflix 首页主视觉 UI](./gallery-part-2.md#case-387)
+- [例 402：3D 小红书个人资料卡](./gallery-part-2.md#case-402)
 
 <a name="cat-infographic"></a>
 
