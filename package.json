@@ -7,6 +7,8 @@
     "generate:site-data": "node scripts/generate-site-data.mjs",
     "generate:style-skill": "node scripts/generate-style-skill.mjs",
     "install:skill": "node scripts/install-style-skill.mjs",
+    "pack:skill": "npm pack ./agents/skills/gpt-image-2-style-library --dry-run",
+    "publish:skill:npm": "npm publish ./agents/skills/gpt-image-2-style-library --access public",
     "predev": "npm run generate:site-data && npm run generate:style-skill",
     "dev": "vite",
     "prebuild": "npm run generate:site-data && npm run generate:style-skill",

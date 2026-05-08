@@ -40,7 +40,38 @@ The core goal is simple: compress prose-style prompts into structured protocols.
 
 ## 🤖 Agent Skill
 
-This repository now includes a source-level Codex skill for choosing GPT-Image2 styles, templates, categories, and scene tags from the same data used by the website.
+This repository includes a Codex skill for choosing GPT-Image2 styles, templates, categories, and scene tags from the same data used by the website.
+
+Package links: [npm](https://www.npmjs.com/package/gpt-image-2-style-library) / [GitHub Packages](https://github.com/freestylefly/awesome-gpt-image-2/pkgs/npm/gpt-image-2-style-library)
+
+Install from npm:
+
+```bash
+npx gpt-image-2-style-library install
+```
+
+Or install globally:
+
+```bash
+npm install -g gpt-image-2-style-library
+gpt-image-2-style-library install
+```
+
+Install from GitHub Packages:
+
+```bash
+npm login --scope=@freestylefly --registry=https://npm.pkg.github.com
+npm install -g @freestylefly/gpt-image-2-style-library --registry=https://npm.pkg.github.com
+gpt-image-2-style-library install
+```
+
+Use it in Codex with a request like:
+
+```text
+Use gpt-image-2-style-library to create an infographic prompt about Codex.
+```
+
+For local source development:
 
 ```bash
 npm run generate:style-skill

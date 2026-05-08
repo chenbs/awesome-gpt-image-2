@@ -40,7 +40,38 @@ GPT-Image2 全量开放后，AI 画图从“能不能出图”变成了“能不
 
 ## 🤖 Agent Skill
 
-仓库内新增了 Codex skill，用同一份风格库数据为 Agent 选择 GPT-Image2 模板、分类、风格和场景标签。
+仓库内提供了 Codex skill，用同一份风格库数据为 Agent 选择 GPT-Image2 模板、分类、风格和场景标签。
+
+包地址：[npm](https://www.npmjs.com/package/gpt-image-2-style-library) / [GitHub Packages](https://github.com/freestylefly/awesome-gpt-image-2/pkgs/npm/gpt-image-2-style-library)
+
+从 npm 安装：
+
+```bash
+npx gpt-image-2-style-library install
+```
+
+也可以全局安装：
+
+```bash
+npm install -g gpt-image-2-style-library
+gpt-image-2-style-library install
+```
+
+从 GitHub Packages 安装：
+
+```bash
+npm login --scope=@freestylefly --registry=https://npm.pkg.github.com
+npm install -g @freestylefly/gpt-image-2-style-library --registry=https://npm.pkg.github.com
+gpt-image-2-style-library install
+```
+
+在 Codex 里这样调用：
+
+```text
+使用 gpt-image-2-style-library 技能，帮我生成介绍 Codex 的信息图
+```
+
+本地源码开发时使用：
 
 ```bash
 npm run generate:style-skill
