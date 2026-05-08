@@ -2,14 +2,18 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   ArrowUpRight,
+  Bot,
   Check,
   Copy,
   Github,
+  PackageCheck,
   Search,
   Sparkles,
+  Terminal,
   WandSparkles
 } from 'lucide-react';
 import './styles.css';
+import skillExampleImage from '../agents/skills/gpt-image-2-style-library/assets/city-life-system-map.png';
 
 const fallbackRepoUrl = 'https://github.com/freestylefly/awesome-gpt-image-2';
 
@@ -18,6 +22,7 @@ const copy = {
     loading: 'Loading GPT-Image2 cases...',
     brand: 'GPT-Image2 Gallery',
     navCases: 'Cases',
+    navSkill: 'Skill',
     navTemplates: 'Templates',
     eyebrow: 'Live GPT-Image2 prompt gallery',
     title: 'From viral images to reusable prompts.',
@@ -36,6 +41,20 @@ const copy = {
       'Each template is distilled from real GPT-Image2 examples and includes structure, constraints, and pitfalls for production use.',
     templateKind: 'Prompt Template',
     openTemplate: 'Open Template',
+    skillEyebrow: 'Agent skill',
+    skillTitle: 'Bring the GPT-Image2 style library into Claude Code and Codex.',
+    skillSubtitle:
+      'Install one skill, then let your agent choose templates, visual styles, scene tags, and pitfalls from the same library behind this site.',
+    skillCommandLabel: 'Install for local agents',
+    skillPromptLabel: 'Try this request',
+    skillPrompt: 'Use gpt-image-2-style-library to create a city life system map.',
+    skillCopyCommand: 'Copy command',
+    skillOpenDocs: 'Open skill source',
+    skillNpm: 'View npm package',
+    skillCopied: 'Command copied',
+    skillExampleAlt: 'City life system map generated with the GPT-Image2 style library skill',
+    skillExampleCaption: 'Example output generated from the style-library skill.',
+    skillStats: ['Claude Code ready', 'Codex ready', '20+ templates'],
     search: 'Search cases, sources, prompts...',
     category: 'Category',
     style: 'Style',
@@ -52,6 +71,7 @@ const copy = {
     loading: '正在加载 GPT-Image2 案例...',
     brand: 'GPT-Image2 画廊',
     navCases: '案例',
+    navSkill: '技能',
     navTemplates: '模板',
     eyebrow: '实时更新的 GPT-Image2 提示词画廊',
     title: '从爆款图片，到可复用 Prompt。',
@@ -70,6 +90,20 @@ const copy = {
       '每套模板都从真实 GPT-Image2 案例里提炼，包含结构、约束和防坑经验，适合生产流程直接复用。',
     templateKind: '提示词模板',
     openTemplate: '打开模板',
+    skillEyebrow: 'Agent Skill',
+    skillTitle: '把 GPT-Image2 风格库装进 Claude Code 和 Codex。',
+    skillSubtitle:
+      '安装一个 skill，让 Agent 从本站同源的模板、风格、场景和防坑规则里自动选型，直接输出可复制的 GPT Image 2 prompt。',
+    skillCommandLabel: '安装到本地 Agent',
+    skillPromptLabel: '试试这个请求',
+    skillPrompt: '用 gpt-image-2-style-library 技能生成城市生命系统图谱',
+    skillCopyCommand: '复制命令',
+    skillOpenDocs: '打开 skill 源码',
+    skillNpm: '查看 npm 包',
+    skillCopied: '命令已复制',
+    skillExampleAlt: '使用 GPT-Image2 风格库 skill 生成的城市生命系统图谱',
+    skillExampleCaption: '示例：用 gpt-image-2-style-library 生成“城市生命系统图谱”。',
+    skillStats: ['Claude Code 可用', 'Codex 可用', '20+ 套模板'],
     search: '搜索案例、来源、Prompt...',
     category: '分类',
     style: '风格',
@@ -165,23 +199,28 @@ function orderByLibrary(values, libraryItems = []) {
   });
 }
 
+async function copyToClipboard(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+}
+
 function useCopy() {
   const [copiedId, setCopiedId] = useState(null);
 
   async function copyPrompt(caseItem) {
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(caseItem.prompt);
-    } else {
-      const textarea = document.createElement('textarea');
-      textarea.value = caseItem.prompt;
-      textarea.setAttribute('readonly', '');
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-    }
+    await copyToClipboard(caseItem.prompt);
     setCopiedId(caseItem.id);
     window.setTimeout(() => setCopiedId(null), 1600);
   }
@@ -264,6 +303,79 @@ function LanguageSwitch({ language, setLanguage }) {
         中文
       </button>
     </div>
+  );
+}
+
+function SkillSection({ language, repoUrl }) {
+  const t = copy[language];
+  const [commandCopied, setCommandCopied] = useState(false);
+  const installCommand =
+    'npx skills add freestylefly/awesome-gpt-image-2 --skill gpt-image-2-style-library --agent claude-code codex --global --yes --copy';
+  const skillSourceUrl = `${repoUrl}/tree/main/agents/skills/gpt-image-2-style-library`;
+  const npmUrl = 'https://www.npmjs.com/package/gpt-image-2-style-library';
+
+  async function handleCopyCommand() {
+    await copyToClipboard(installCommand);
+    setCommandCopied(true);
+    window.setTimeout(() => setCommandCopied(false), 1600);
+  }
+
+  return (
+    <section className="skillSection" id="agent-skill">
+      <div className="skillGrid">
+        <div className="skillCopy">
+          <span className="eyebrow">
+            <Bot size={16} />
+            {t.skillEyebrow}
+          </span>
+          <h2>{t.skillTitle}</h2>
+          <p>{t.skillSubtitle}</p>
+          <div className="skillStats">
+            {t.skillStats.map((item, index) => {
+              const icons = [Bot, Terminal, PackageCheck];
+              const Icon = icons[index] || Check;
+              return (
+                <span key={item}>
+                  <Icon size={16} />
+                  {item}
+                </span>
+              );
+            })}
+          </div>
+          <div className="skillCommand">
+            <div className="skillCommandHeader">
+              <strong>{t.skillCommandLabel}</strong>
+              <button type="button" onClick={handleCopyCommand}>
+                {commandCopied ? <Check size={16} /> : <Copy size={16} />}
+                {commandCopied ? t.skillCopied : t.skillCopyCommand}
+              </button>
+            </div>
+            <code>{installCommand}</code>
+          </div>
+          <div className="skillPrompt">
+            <span>{t.skillPromptLabel}</span>
+            <code>{t.skillPrompt}</code>
+          </div>
+          <div className="skillActions">
+            <a href={skillSourceUrl} target="_blank" rel="noreferrer">
+              <Github size={18} />
+              {t.skillOpenDocs}
+            </a>
+            <a href={npmUrl} target="_blank" rel="noreferrer">
+              <PackageCheck size={18} />
+              {t.skillNpm}
+            </a>
+          </div>
+        </div>
+        <figure className="skillPreview">
+          <img src={skillExampleImage} alt={t.skillExampleAlt} loading="lazy" />
+          <figcaption>
+            <Sparkles size={15} />
+            {t.skillExampleCaption}
+          </figcaption>
+        </figure>
+      </div>
+    </section>
   );
 }
 
@@ -405,6 +517,15 @@ function App() {
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
   }, [language]);
 
+  useEffect(() => {
+    if (!siteData || !styleLibrary || !window.location.hash) return;
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (!target) return;
+    window.requestAnimationFrame(() => {
+      target.scrollIntoView({ block: 'start' });
+    });
+  }, [siteData, styleLibrary]);
+
   const hotCases = useMemo(() => {
     if (!siteData) return [];
     return [...siteData.cases]
@@ -463,6 +584,7 @@ function App() {
         </a>
         <div className="topbarControls">
           <nav>
+            <a href="#agent-skill">{t.navSkill}</a>
             <a href="#templates">{t.navTemplates}</a>
             <a href="#gallery">{t.navCases}</a>
             <a href={repoUrl} target="_blank" rel="noreferrer">
@@ -489,6 +611,8 @@ function App() {
           </a>
         ))}
       </section>
+
+      <SkillSection language={language} repoUrl={repoUrl} />
 
       <TemplateSection language={language} styleLibrary={styleLibrary} />
 
