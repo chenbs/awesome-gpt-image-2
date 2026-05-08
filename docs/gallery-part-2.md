@@ -7733,3 +7733,19 @@ Add small white handwriting signature text "BubbleBrain" on the bottom right cor
 ```
 
 ***
+
+<a name="case-401"></a>
+
+### 例 401：Lost in 国家旅行海报拼贴
+
+![Lost in 国家旅行海报拼贴](../data/images/case401.jpg)
+
+**来源：** [@SadiaMalik182](https://x.com/SadiaMalik182) / [aiiStudio prompt](https://aiistudio.com/prompt/2052388203395514683/lost-in-country-travel-poster-collage)
+
+**提示词：**
+
+```text
+Create a stylized travel poster / graphic collage for [country]. The main subject should be a stylish international tourist visiting [country], clearly presented as a traveler and not a local resident. Show the tourist wearing modern travel fashion, with details such as a camera, backpack, sunglasses, map, or suitcase, exploring the culture and atmosphere of [country]. Place the tourist in a dynamic composition surrounded by iconic architecture, streets, landscapes, landmarks, transportation, food, signage, and cultural elements associated with [country]. Blend realistic character detail with a graphic collage background made of layered paper textures, torn poster edges, sticker elements, halftone dots, editorial typography, and bold geometric shapes. Include authentic visual motifs from [country], but keep the tourist's appearance and styling globally fashionable and clearly foreign to the setting. Add a large readable headline: "LOST IN [country]". Modern, artistic, premium editorial travel poster aesthetic, balanced layout, print-worthy composition.
+```
+
+***
