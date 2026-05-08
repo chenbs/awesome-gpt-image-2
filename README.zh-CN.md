@@ -40,21 +40,46 @@ GPT-Image2 全量开放后，AI 画图从“能不能出图”变成了“能不
 
 ## 🤖 Agent Skill
 
-仓库内提供了 Codex skill，用同一份风格库数据为 Agent 选择 GPT-Image2 模板、分类、风格和场景标签。
+仓库内提供了 agent skill，用同一份风格库数据为 Claude Code、Codex 等 Agent 选择 GPT-Image2 模板、分类、风格和场景标签。
 
 包地址：[npm](https://www.npmjs.com/package/gpt-image-2-style-library) / [GitHub Packages](https://github.com/freestylefly/awesome-gpt-image-2/pkgs/npm/gpt-image-2-style-library)
 
-从 npm 安装：
+### Agent 一键安装
+
+推荐给 Claude Code、Codex、Cursor，以及其他 [`skills`](https://www.npmjs.com/package/skills) 支持的本地 Agent：
 
 ```bash
-npx gpt-image-2-style-library install
+npx skills add freestylefly/awesome-gpt-image-2 --skill gpt-image-2-style-library --agent claude-code codex --global --yes --copy
 ```
 
-也可以全局安装：
+安装到所有支持的本地 Agent：
+
+```bash
+npx skills add freestylefly/awesome-gpt-image-2 --global --all --copy
+```
+
+### Claude Code 插件市场
+
+在 Claude Code 中运行：
+
+```text
+/plugin marketplace add freestylefly/awesome-gpt-image-2
+/plugin install gpt-image-2-style-library@awesome-gpt-image-2
+```
+
+### npm CLI
+
+如果你习惯 npm，可以先安装 CLI，再同步到本地 Agent 技能目录：
 
 ```bash
 npm install -g gpt-image-2-style-library
-gpt-image-2-style-library install
+gpt-image-2-style-library install all
+```
+
+也可以不全局安装，直接运行：
+
+```bash
+npx gpt-image-2-style-library install all
 ```
 
 从 GitHub Packages 安装：
@@ -62,10 +87,12 @@ gpt-image-2-style-library install
 ```bash
 npm login --scope=@freestylefly --registry=https://npm.pkg.github.com
 npm install -g @freestylefly/gpt-image-2-style-library --registry=https://npm.pkg.github.com
-gpt-image-2-style-library install
+gpt-image-2-style-library install all
 ```
 
-在 Codex 里这样调用：
+`install all` 会写入 Codex 和 Claude Code 常用的本地技能目录，包括 `~/.codex/skills`、`~/.claude/skills`、`~/.agents/skills`。安装后重启 Agent 会话。
+
+这样调用：
 
 ```text
 使用 gpt-image-2-style-library 技能，帮我生成介绍 Codex 的信息图

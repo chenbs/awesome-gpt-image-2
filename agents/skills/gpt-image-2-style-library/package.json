@@ -1,7 +1,7 @@
 {
   "name": "gpt-image-2-style-library",
-  "version": "1.0.0",
-  "description": "Codex skill for choosing GPT-Image2 visual styles, prompt templates, categories, and scene tags.",
+  "version": "1.0.1",
+  "description": "Agent skill for choosing GPT-Image2 visual styles, prompt templates, categories, and scene tags.",
   "type": "module",
   "license": "MIT",
   "repository": {
@@ -14,6 +14,8 @@
     "url": "https://github.com/freestylefly/awesome-gpt-image-2/issues"
   },
   "keywords": [
+    "agent-skill",
+    "claude-code",
     "codex",
     "codex-skill",
     "gpt-image-2",
